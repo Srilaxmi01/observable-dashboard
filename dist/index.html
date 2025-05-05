@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.3">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight.dcdbf18e.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight.dcdbf18e.css">
+<link rel="modulepreload" href="./_observablehq/client.049f2d97.js">
+<link rel="modulepreload" href="./_observablehq/runtime.e080113b.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.82806664.js">
+<link rel="modulepreload" href="./_node/@observablehq/plot@0.6.17/index.28168f6d.js">
+<link rel="modulepreload" href="./_node/@observablehq/inputs@0.12.0/index.4eed0a6e.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="./_node/d3@7.9.0/index.6063bdcc.js">
+<link rel="modulepreload" href="./_node/isoformat@0.2.1/index.0882e9d9.js">
+<link rel="modulepreload" href="./_node/interval-tree-1d@1.0.4/index.eeaa354d.js">
+<link rel="modulepreload" href="./_node/htl@0.3.1/index.0caf36e7.js">
+<link rel="modulepreload" href="./_node/d3-array@3.2.4/index.f89e3560.js">
+<link rel="modulepreload" href="./_node/d3-axis@3.0.0/index.34ded868.js">
+<link rel="modulepreload" href="./_node/d3-brush@3.0.0/index.76e53644.js">
+<link rel="modulepreload" href="./_node/d3-chord@3.0.1/index.eb7a3f59.js">
+<link rel="modulepreload" href="./_node/d3-color@3.1.0/index.e8c126ff.js">
+<link rel="modulepreload" href="./_node/d3-contour@4.0.2/index.dec5b7e9.js">
+<link rel="modulepreload" href="./_node/d3-delaunay@6.0.4/index.1771ba9f.js">
+<link rel="modulepreload" href="./_node/d3-dispatch@3.0.1/index.be49ca5f.js">
+<link rel="modulepreload" href="./_node/d3-drag@3.0.0/index.d3ae5f0f.js">
+<link rel="modulepreload" href="./_node/d3-dsv@3.0.1/index.48418e2e.js">
+<link rel="modulepreload" href="./_node/d3-ease@3.0.1/index.09153f73.js">
+<link rel="modulepreload" href="./_node/d3-fetch@3.0.1/index.2c1c499d.js">
+<link rel="modulepreload" href="./_node/d3-force@3.0.0/index.952bd793.js">
+<link rel="modulepreload" href="./_node/d3-format@3.1.0/index.da30fb93.js">
+<link rel="modulepreload" href="./_node/d3-geo@3.1.1/index.0cc60a7f.js">
+<link rel="modulepreload" href="./_node/d3-hierarchy@3.1.2/index.0a013d9a.js">
+<link rel="modulepreload" href="./_node/d3-interpolate@3.0.1/index.7ed7c7fe.js">
+<link rel="modulepreload" href="./_node/d3-path@3.1.0/index.c2b3c473.js">
+<link rel="modulepreload" href="./_node/d3-polygon@3.0.1/index.32c3d834.js">
+<link rel="modulepreload" href="./_node/d3-quadtree@3.0.1/index.e9fed2eb.js">
+<link rel="modulepreload" href="./_node/d3-random@3.0.1/index.fd2cc361.js">
+<link rel="modulepreload" href="./_node/d3-scale@4.0.2/index.0574410e.js">
+<link rel="modulepreload" href="./_node/d3-scale-chromatic@3.1.0/index.7961cbed.js">
+<link rel="modulepreload" href="./_node/d3-selection@3.0.0/index.13204b25.js">
+<link rel="modulepreload" href="./_node/d3-shape@3.2.0/index.b551bc1c.js">
+<link rel="modulepreload" href="./_node/d3-time@3.1.0/index.8fcc123e.js">
+<link rel="modulepreload" href="./_node/d3-time-format@4.1.0/index.08e7c36a.js">
+<link rel="modulepreload" href="./_node/d3-timer@3.0.1/index.0ee6092b.js">
+<link rel="modulepreload" href="./_node/d3-transition@3.0.1/index.d140d658.js">
+<link rel="modulepreload" href="./_node/d3-zoom@3.0.0/index.78e4486d.js">
+<link rel="modulepreload" href="./_node/binary-search-bounds@2.0.5/index.990a1c6d.js">
+<link rel="modulepreload" href="./_node/internmap@2.0.3/index.4106013c.js">
+<link rel="modulepreload" href="./_node/delaunator@5.0.1/index.70ae1478.js">
+<link rel="modulepreload" href="./_node/robust-predicates@3.0.2/index.bdc459cc.js">
+<script type="module">
+
+import {define} from "./_observablehq/client.049f2d97.js";
+import {registerFile} from "./_observablehq/stdlib.82806664.js";
+
+registerFile("./data/workout_fitness_tracker_data.csv", {"name":"./data/workout_fitness_tracker_data.csv","mimeType":"text/csv","path":"./_file/data/workout_fitness_tracker_data.cfb9446e.csv","lastModified":1744171602850,"size":974999});
+
+define({id: "2a1c6a19", outputs: ["FileAttachment","Plot","Inputs","data"], body: async () => {
+const [{FileAttachment}, Plot, Inputs] = await Promise.all([import("./_observablehq/stdlib.82806664.js"), import("./_node/@observablehq/plot@0.6.17/index.28168f6d.js"), import("./_node/@observablehq/inputs@0.12.0/index.4eed0a6e.js")]);
+
+// Load the dataset
+const data = await FileAttachment("./data/workout_fitness_tracker_data.csv").csv({ typed: true });
+return {FileAttachment,Plot,Inputs,data};
+}});
+
+define({id: "f3fabe73", inputs: ["view","Inputs","data"], outputs: ["genderFilter"], body: (view,Inputs,data) => {
+const genderFilter = view(Inputs.select(
+  [...new Set(data.map(d => d["Gender"]))],
+  { label: "Select Gender", value: "Male" }
+));
+return {genderFilter};
+}});
+
+define({id: "1fd3e66e", inputs: ["data","view","Inputs"], outputs: ["workoutTypes","workoutTypeFilter"], body: (data,view,Inputs) => {
+const workoutTypes = ["All Types", ...new Set(data.map(d => d["Workout Type"]))];
+const workoutTypeFilter = view(Inputs.select(
+  workoutTypes,
+  { label: "Select Workout Type", value: "All Types" }
+));
+return {workoutTypes,workoutTypeFilter};
+}});
+
+define({id: "3c2a8843", inputs: ["data","genderFilter","workoutTypeFilter"], outputs: ["genderAndWorkoutFilteredData"], body: (data,genderFilter,workoutTypeFilter) => {
+// Filter dataset based on selections
+const genderAndWorkoutFilteredData = data.filter(d =>
+  d["Gender"] === genderFilter &&
+  (workoutTypeFilter === "All Types" || d["Workout Type"] === workoutTypeFilter)
+);
+return {genderAndWorkoutFilteredData};
+}});
+
+define({id: "79fe5476", inputs: ["genderAndWorkoutFilteredData"], outputs: ["sumCaloriesByWorkout"], body: (genderAndWorkoutFilteredData) => {
+const sumCaloriesByWorkout = Object.values(
+  genderAndWorkoutFilteredData.reduce((acc, row) => {
+    const type = row["Workout Type"];
+    if (!acc[type]) {
+      acc[type] = { Workout_Type: type, calories: 0 };
+    }
+    acc[type].calories += +row["Calories Burned"];
+    return acc;
+  }, {})
+);
+return {sumCaloriesByWorkout};
+}});
+
+define({id: "d45bf970", inputs: ["display","Plot","sumCaloriesByWorkout"], body: (display,Plot,sumCaloriesByWorkout) => {
+display(
+  Plot.plot({
+    width: 700,
+    height: 500,
+    x: { label: "Workout Type" },
+    y: { label: "Total Calories Burned" }, // <-- Update label
+    color: { scheme: "turbo" },
+    marks: [
+      Plot.barY(sumCaloriesByWorkout, {
+        x: "Workout_Type",
+        y: "calories",  // <-- use 'calories' directly now
+        tip: true,
+        title: d => `${d.Workout_Type}: ${d.calories.toFixed(0)} kcal`
+      })
+    ]
+  })
+);
+}});
+
+define({id: "5933331d", inputs: ["genderAndWorkoutFilteredData"], outputs: ["heartRateBuckets","heartRateByDuration"], body: (genderAndWorkoutFilteredData) => {
+const heartRateBuckets = {};
+
+for (const row of genderAndWorkoutFilteredData) {
+  const duration = +row["Workout Duration (mins)"];
+  const heartRate = +row["Heart Rate (bpm)"];
+  if (isNaN(duration) || isNaN(heartRate)) continue;
+
+  const bucket = Math.floor(duration / 5) * 5;
+  if (!heartRateBuckets[bucket]) heartRateBuckets[bucket] = { bucket, heartRateSum: 0, count: 0 };
+
+  heartRateBuckets[bucket].heartRateSum += heartRate;
+  heartRateBuckets[bucket].count += 1;
+}
+
+const heartRateByDuration = Object.values(heartRateBuckets)
+  .map(d => ({
+    Duration: d.bucket,
+    AvgHeartRate: d.heartRateSum / d.count
+  }))
+  .sort((a, b) => a.Duration - b.Duration);
+return {heartRateBuckets,heartRateByDuration};
+}});
+
+define({id: "429bc9ea", inputs: ["display","Plot","heartRateByDuration"], body: (display,Plot,heartRateByDuration) => {
+display(
+  Plot.plot({
+    width: 700,
+    height: 500,
+    x: { label: "Workout Duration (mins)" },
+    y: { label: "Average Heart Rate (bpm)" },
+    marks: [
+      Plot.line(heartRateByDuration, {
+        x: "Duration",
+        y: "AvgHeartRate",
+        stroke: "#e63946"
+      }),
+      Plot.dot(heartRateByDuration, {
+        x: "Duration",
+        y: "AvgHeartRate",
+        r: 3,
+        tip: true,
+        title: d => `${d.Duration} mins: ${d.AvgHeartRate.toFixed(1)} bpm`
+      })
+    ]
+  })
+);
+}});
+
+define({id: "2cb65932", inputs: ["genderAndWorkoutFilteredData"], outputs: ["moodPairs","moodMatrix"], body: (genderAndWorkoutFilteredData) => {
+const moodPairs = {};
+
+// ✅ Use filtered data now!
+for (const row of genderAndWorkoutFilteredData) {
+  const before = row["Mood Before Workout"]?.trim();
+  const after = row["Mood After Workout"]?.trim();
+  if (!before || !after) continue;
+
+  const key = `${before}|${after}`;
+  if (!moodPairs[key]) moodPairs[key] = { before, after, count: 0 };
+  moodPairs[key].count += 1;
+}
+
+const moodMatrix = Object.values(moodPairs);
+return {moodPairs,moodMatrix};
+}});
+
+define({id: "a5135fc9", inputs: ["display","Plot","genderAndWorkoutFilteredData","moodMatrix"], body: (display,Plot,genderAndWorkoutFilteredData,moodMatrix) => {
+display(
+  Plot.plot({
+    width: 1200,
+    height: 500,
+    x: {
+      label: "Mood After Workout",
+      domain: [...new Set(genderAndWorkoutFilteredData.map(d => d["Mood After Workout"]))].sort()
+    },
+    y: {
+      label: "Mood Before Workout",
+      domain: [...new Set(genderAndWorkoutFilteredData.map(d => d["Mood Before Workout"]))].sort().reverse()
+    },
+    color: { scheme: "reds", legend: true, label: "Frequency" },
+    marks: [
+      Plot.cell(moodMatrix, {
+        x: "after",
+        y: "before",
+        fill: "count",
+        title: d => `Before: ${d.before}, After: ${d.after}\nCount: ${d.count}`
+      })
+    ]
+  })
+);
+
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type)[id], h2:first-child[id], :not(h1) + h2[id]">
+<nav>
+<div>Contents</div>
+<ol>
+<li class="observablehq-secondary-link"><a href="#filter-by-gender">🔘 Filter by Gender:</a></li>
+<li class="observablehq-secondary-link"><a href="#filter-by-workout-type">🔘 Filter by Workout Type:</a></li>
+<li class="observablehq-secondary-link"><a href="#visualization-1-average-calories-burned-by-workout-type">📈 Visualization 1: Average Calories Burned by Workout Type</a></li>
+<li class="observablehq-secondary-link"><a href="#visualization-2-average-heart-rate-by-workout-duration">❤️ Visualization 2: Average Heart Rate by Workout Duration</a></li>
+<li class="observablehq-secondary-link"><a href="#visualization-3-heatmap-mood-before-vs-after-workout">😊 Visualization 3: Heatmap — Mood Before vs. After Workout</a></li>
+<li class="observablehq-secondary-link"><a href="#final-insights-and-observations">📝 Final Insights and Observations</a></li>
+</ol>
+</nav>
+</aside>
+<main id="observablehq-main" class="observablehq">
+<div>
+  <h3>Sri Laxmi Nathi</h3>
+  <h3>801412570</h3>
+</div>
+<div style="text-align: center; max-width: 800px; margin: 0 auto;">
+  <h2 style="margin: 10px 0;">Fitness and Wellness Tracker Dashboard</h2>
+  <p>This dashboard explores fitness activities, calories burned, workout types, and health metrics based on daily user data collected from a fitness tracking application.</p>
+</div>
+<hr>
+<h3 id="theme" tabindex="-1"><a class="observablehq-header-anchor" href="#theme">🏋️ Theme</a></h3>
+<p>Understanding daily fitness activities, calories burned, heart rate trends, and mood shifts across different workout patterns.</p>
+<hr>
+<h3 id="about-the-dataset" tabindex="-1"><a class="observablehq-header-anchor" href="#about-the-dataset">📊 About the Dataset</a></h3>
+<p>The dataset contains 10,000 records of individuals' daily fitness tracking activities. Each entry records calories burned, workout types, duration, distances, heart rates, moods, and step counts. The goal is to uncover fitness patterns and suggest actionable health and wellness insights.</p>
+<hr>
+<style>
+  .viz-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .viz-half {
+    flex: 1 1 40%;
+    padding: 6px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff); /* 🌟 nice blueish gradient */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* soft shadow */
+  }
+
+  .viz-full {
+  padding: 6px;
+  border: 2px solid #bbb;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  max-width: 90%;   /* optional: shrink full width box slightly */
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+  .filter-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .filter-box {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    background: linear-gradient(135deg,rgb(246, 231, 242), #ffffff); /* 🌟 light purple gradient */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+</style>
+<div class="observablehq observablehq--block"><!--:2a1c6a19:--></div>
+<div class="filter-grid"> <div class="filter-box">
+<h2 id="filter-by-gender" tabindex="-1"><a class="observablehq-header-anchor" href="#filter-by-gender">🔘 Filter by Gender:</a></h2>
+<div class="observablehq observablehq--block"><!--:f3fabe73:--></div>
+</div> <div class="filter-box">
+<h2 id="filter-by-workout-type" tabindex="-1"><a class="observablehq-header-anchor" href="#filter-by-workout-type">🔘 Filter by Workout Type:</a></h2>
+<div class="observablehq observablehq--block"><!--:1fd3e66e:--></div>
+</div>
+</div>
+<div class="observablehq observablehq--block"><!--:3c2a8843:--></div>
+<div class="viz-grid"> 
+<div class="viz-half">
+<h2 id="visualization-1-average-calories-burned-by-workout-type" tabindex="-1"><a class="observablehq-header-anchor" href="#visualization-1-average-calories-burned-by-workout-type">📈 Visualization 1: Average Calories Burned by Workout Type</a></h2>
+<div class="observablehq observablehq--block"><!--:79fe5476:--></div>
+<div class="observablehq observablehq--block"><!--:d45bf970:--></div>
+</div>
+<div class="viz-half">
+<h2 id="visualization-2-average-heart-rate-by-workout-duration" tabindex="-1"><a class="observablehq-header-anchor" href="#visualization-2-average-heart-rate-by-workout-duration">❤️ Visualization 2: Average Heart Rate by Workout Duration</a></h2>
+<div class="observablehq observablehq--block"><!--:5933331d:--></div>
+<div class="observablehq observablehq--block"><!--:429bc9ea:--></div>
+</div>
+</div>
+<hr>
+<div class="viz-full">
+<div>
+<h2 id="visualization-3-heatmap-mood-before-vs-after-workout" tabindex="-1"><a class="observablehq-header-anchor" href="#visualization-3-heatmap-mood-before-vs-after-workout">😊 Visualization 3: Heatmap — Mood Before vs. After Workout</a></h2>
+<div class="observablehq observablehq--block"><!--:2cb65932:--></div>
+<div class="observablehq observablehq--block"><!--:a5135fc9:--></div>
+</div>
+</div>
+<h2 id="final-insights-and-observations" tabindex="-1"><a class="observablehq-header-anchor" href="#final-insights-and-observations">📝 Final Insights and Observations</a></h2>
+<ul>
+<li><strong>Workout Impact</strong>: Cardio and HIIT workouts burn the most calories on average.</li>
+<li><strong>Heart Rate Trend</strong>: Average heart rate rises with longer workout durations, peaking around 40–60 minutes.</li>
+<li><strong>Mood Shifts</strong>: Users often transition from "Tired", "Sad", or "Neutral" moods to more "Energetic", "Relaxed", or "Happy" states after workouts.</li>
+</ul>
+<hr>
+</main>
+<footer id="observablehq-footer">
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2025-05-05T17:30:52">May 5, 2025</a>.</div>
+</footer>
+</div>
+</body>
+</html>
